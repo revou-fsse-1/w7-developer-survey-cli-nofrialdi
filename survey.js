@@ -59,20 +59,20 @@ const questions = [
     when(answers) {
       return answers.developer === "Yes";
     },
-    // validate(answer) {
-    //   const salaryRegex = /^[$]?[\d,]+$/;
-    //   if (!salaryRegex.test(answer)) {
-    //     return "Not a valid salary!";
-    //   }
-    //   return true;
-    // },
-
-    validate: (answer) => {
-      if (isNaN(answer)) {
-        return "please enter a valid number";
+    validate(answer) {
+      const salaryRegex = /^[$]?[\d,]+$/;
+      if (!salaryRegex.test(answer)) {
+        return "Not a valid salary!";
       }
       return true;
     },
+
+    // validate: (answer) => {
+    //   if (isNaN(answer)) {
+    //     return "please enter a valid number";
+    //   }
+    //   return true;
+    // },
   },
 ];
 
