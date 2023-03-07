@@ -1,0 +1,17 @@
+{
+  "name": "w7-developer-survey-cli-nofrialdi",
+  "version": "1.0.0",
+  "description": "- Assignment Example for Week 7: Programming — JavaScript, Node.js, npm, TypeScript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.5"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
