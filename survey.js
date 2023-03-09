@@ -41,6 +41,12 @@ const questions = [
     when(answers) {
       return answers.developer === "Yes";
     },
+    validate: function (value) {
+      if (!value) {
+        return "Please select your years of experience.";
+      }
+      return true;
+    },
   },
 
   {
@@ -51,6 +57,12 @@ const questions = [
     when(answers) {
       return answers.developer === "Yes";
     },
+    validate: function (value) {
+      if (!value || value.length === 0) {
+        return "Please select at least one library.";
+      }
+      return true;
+    },
   },
   {
     type: "number",
@@ -59,20 +71,15 @@ const questions = [
     when(answers) {
       return answers.developer === "Yes";
     },
-    validate(answer) {
-      const salaryRegex = /^[$]?[\d,]+$/;
-      if (!salaryRegex.test(answer)) {
-        return "Not a valid salary!";
+    validate: (answer) => {
+      if (isNaN(answer)) {
+        return "please enter a valid number";
+      }
+      if (!answer || answer <= 0) {
+        return "Please enter a salary.";
       }
       return true;
     },
-
-    // validate: (answer) => {
-    //   if (isNaN(answer)) {
-    //     return "please enter a valid number";
-    //   }
-    //   return true;
-    // },
   },
 ];
 
