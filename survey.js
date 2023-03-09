@@ -17,7 +17,7 @@ const questions = [
     type: "input",
     name: "email",
     message(answers) {
-      return `Hello ${answers.first_name} What's your email address?`;
+      return `Hello ${answers.firstName} What's your email address?`;
     },
     validate: (answer) => {
       const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
