@@ -4,7 +4,7 @@ const questions = [
   // Type your question here
   {
     type: "input",
-    name: "first_name",
+    name: "firstName",
     message: "What's your first name?",
     validate(answer) {
       if (!answer) {
@@ -20,8 +20,8 @@ const questions = [
       return `Hello ${answers.first_name} What's your email address?`;
     },
     validate: (answer) => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(answer)) {
+      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!validEmail.test(answer)) {
         return "You have to provide a valid email address!";
       }
       return true;
